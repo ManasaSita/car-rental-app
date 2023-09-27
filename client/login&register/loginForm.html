@@ -1,0 +1,14 @@
+<template name="loginForm">
+    <div class="container">
+      <h2>Login</h2>
+      {{> loginButtons}}
+      {{#autoForm collection=false id="loginForm" type="method" meteormethod="loginUser"}}
+        <fieldset>
+          {{> afQuickField name="username" label="Username"}}
+          {{> afQuickField name="password" label="Password" type="password"}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+</template>
+  

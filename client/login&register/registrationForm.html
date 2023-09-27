@@ -1,0 +1,15 @@
+<template name="registrationForm">
+    <div class="container">
+      <h2>Register</h2>
+      {{> loginButtons}}
+      {{#autoForm collection=false id="registrationForm" type="method" meteormethod="registerUser"}}
+        <fieldset>
+          {{> afQuickField name="username" label="Username"}}
+          {{> afQuickField name="password" label="Password" type="password"}}
+          {{> afQuickField name="confirmPassword" label="Confirm Password" type="password"}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+    </div>
+</template>
+  
